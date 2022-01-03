@@ -1,5 +1,5 @@
 import './App.css';
-// import About from './Components/About';
+import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import React, { useState } from 'react';
@@ -12,7 +12,7 @@ function App() {
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = 'grey';
-      document.title = 'TextUtils - Dark Mode';
+      // document.title = 'TextUtils - Dark Mode';
       // setInterval(() => {
       //   document.title = 'TextUtils is Amazing Mode';
       // }, 2000);
@@ -23,7 +23,7 @@ function App() {
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      document.title = 'TextUtils - Light Mode';
+      // document.title = 'TextUtils - Light Mode';
     }
   }
   return (
@@ -33,8 +33,9 @@ function App() {
       {/* <Router> */}
       <Navbar title="textutils" mode={mode} toggleMode={toggleMode}/>
       <div className='container my-3'>
-       <TextForm heading="Enter the text to analyze below"  mode={mode}/>
-      {/* <About/> */}
+       <TextForm heading="TextUtils - Word Counter, Character Counter,
+       Remove extra spaces"  mode={mode}/>
+      <About  mode={mode}/>
       </div>
     </>
   );
