@@ -22,10 +22,7 @@ export default function TextForm(props) {
 
     // Credits: A
     const handleCopy = () => {
-        var text = document.getElementById("mybox");
-        text.select();
-        navigator.clipboard.writeText(text.value);
-        document.getSelection().removeAllRanges();
+        navigator.clipboard.writeText(text);
     }
 
     // Credits: Coding Wala
