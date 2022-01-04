@@ -8,17 +8,10 @@ import React, { useState } from 'react';
 function App() {
   const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
 
-  const toggleMode = ()=>{
+  const toggleMode = (cls)=>{
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = 'grey';
-      // document.title = 'TextUtils - Dark Mode';
-      // setInterval(() => {
-      //   document.title = 'TextUtils is Amazing Mode';
-      // }, 2000);
-      // setInterval(() => {
-      //   document.title = 'Install TextUtils Now';
-      // }, 1500);
     }
     else{
       setMode('light');
